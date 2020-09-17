@@ -69,10 +69,19 @@ End if
 
 oShell.SendKeys "{Enter}"
 
-for x=1 to 2
-oShell.SendKeys "{TAB}"
-Wscript.Sleep 100
-next
+if Winv="10" then
+	for x=1 to 2
+		oShell.SendKeys "{TAB}"
+		Wscript.Sleep 100
+	next
+End if
+
+if Winv="7" then
+	for x=1 to 1
+		oShell.SendKeys "{TAB}"
+		Wscript.Sleep 100
+	next
+End if
 
 oShell.SendKeys "d"
 
@@ -84,7 +93,7 @@ if Winv="10" then
 End if
 
 if Winv="7" then
-	for x=1 to 9
+	for x=1 to 10
 		oShell.SendKeys "{TAB}"
 		Wscript.Sleep 100
 	next
